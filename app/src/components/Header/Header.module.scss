@@ -1,0 +1,99 @@
+@use "../../styles/variables.scss" as v;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 85px;
+  background-color: v.$nav-footer-color;
+
+  border-bottom: 2px solid v.$border-nav-footer-color;
+
+  padding-left: 77px;
+  padding-right: 104px;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  .imgLogo {
+    width: 52px;
+    height: 52px;
+  }
+
+  .logoText {
+    font-size: v.$logo-text-size;
+    color: v.$text-primary-color;
+
+    font-weight: bold;
+  }
+
+  .textGreen {
+    color: v.$text-secondary-color;
+  }
+}
+
+.navigation {
+  gap: 115px;
+
+  color: v.$text-primary-color;
+
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 80px;
+    font-size: v.$nav-font-size;
+  }
+
+  a {
+    text-decoration: none;
+    color: v.$text-primary-color;
+  }
+}
+
+
+.lang {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 10px;
+  font-weight: 600;
+
+  color: v.$lang-no-active-color;
+  
+  .active {
+    color: v.$text-secondary-color;
+  }
+}
+
+.signInBtn {
+  padding: 12px 25px;
+
+  border-radius: v.$border-radius-btn;
+  border: none;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  background: linear-gradient(#00ff87, #00cc6a);
+  box-shadow: 3px 5px 4px rgba(0, 227, 119, 0.67);
+
+  cursor: pointer;
+  color: v.$btn-text-color;
+
+  transition: transform 0.3s ease;
+
+  &:hover {
+    background: #028f4b;
+    transform: scale(0.9);
+  }
+}

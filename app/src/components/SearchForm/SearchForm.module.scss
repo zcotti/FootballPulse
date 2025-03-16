@@ -1,0 +1,98 @@
+@use "../../styles/variables.scss" as v;
+
+.searchContainer {
+  margin-top: 60px;
+
+  position: relative;
+
+  display: flex;
+
+  border-radius: 20px;
+  border: 2px solid #e2e8f0;
+
+  background-color: #f9f9f9;
+
+  box-shadow: 4px 4px 6px rgba(255, 255, 255, 0.459);
+}
+
+.searchButton {
+  position: absolute;
+
+  left: -2px;
+  top: -2px;
+  bottom: -2px;
+
+  background: linear-gradient(#00fe9e, #00cc6a);
+
+  color: v.$btn-text-color;
+
+  border: none;
+  border-radius: 20px;
+
+  padding: 0 30px;
+  font-size: 17px;
+  font-weight: 500;
+
+  font-family: v.$main-text-style;
+
+  cursor: pointer;
+
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    background: linear-gradient(#02c77b, #01914b);
+  }
+}
+
+.searchIcon {
+  position: absolute;
+
+  right: -2px;
+  top: -2px;
+  bottom: -2px;
+
+  padding: 0 20px;
+
+  background: transparent;
+
+  border-radius: 0 20px 20px 0;
+
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+
+  .icon {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+.searchInput {
+  border: none;
+
+  text-align: left;
+
+  padding: 15px 25px 15px 80px;
+  font-size: 18px;
+
+  outline: none;
+
+  background-color: #f9f9f9;
+
+  font-family: v.$main-text-style;
+
+  z-index: 1;
+
+  width: 100%;
+  margin: 0 40px;
+
+  ::placeholder {
+    color: rgba(0, 0, 0, 0.56);
+  }
+}

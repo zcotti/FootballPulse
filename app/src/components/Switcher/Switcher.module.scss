@@ -1,0 +1,56 @@
+@use "../../styles/variables.scss" as v;
+
+.tabContainer {
+  display: inline-flex;
+
+  background: #f3f4f6;
+
+  border-radius: 8px;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  width: 50%;
+
+  border: none;
+
+  padding: 10px 24px;
+
+  background: transparent;
+
+  font-weight: 600;
+  font-size: 15px;
+
+  color: #333333;
+  cursor: pointer;
+
+  transition: color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    color: v.$btn-text-color;
+  }
+
+  &.active {
+    animation: changeColor 0.5s forwards;
+    border-radius: 8px;
+
+    background: #01cc6a;
+    color: v.$btn-text-color;
+  }
+}
+
+@keyframes changeColor {
+  0% {
+    background: transparent;
+    color: #333333;
+  }
+  100% {
+    background: #01cc6a;
+    color: v.$btn-text-color;
+  }
+}

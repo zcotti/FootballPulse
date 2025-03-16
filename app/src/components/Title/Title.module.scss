@@ -1,0 +1,26 @@
+@use "../../styles/variables.scss" as v;
+
+.title {
+  font-weight: bold;
+  font-size: 100px;
+  color: white;
+
+  margin: 0;
+  padding: 0;
+
+  span {
+    font-weight: 400;
+
+    font-size: 60px;
+    color: v.$text-secondary-color;
+  }
+}
+
+.subTitleText {
+  font-size: 17px;
+  margin-top: 40px;
+
+  color: v.$text-primary-color;
+
+  font-weight: 300;
+}
