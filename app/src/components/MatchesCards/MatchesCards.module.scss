@@ -1,0 +1,25 @@
+@use "../../styles/variables.scss" as v;
+
+.MatchesCont {
+  margin-top: 60px;
+
+  gap: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.LoadText {
+  font-size: 40px;
+  color: v.$text-primary-color;
+}
+
+.cardsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  gap: 20px;
+  width: max-content;
+}

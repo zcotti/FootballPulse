@@ -1,0 +1,110 @@
+@use "../../styles/variables.scss" as v;
+
+.cardLive {
+  border-radius: 15px;
+  border: 1px solid #5e6e88;
+
+  width: 530px;
+  height: 243px;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .leagueName {
+    font-size: v.$default-size-text;
+    font-weight: 600;
+
+    color: white;
+    text-align: center;
+  }
+
+  .liveIndicator {
+    width: 70px;
+
+    border-radius: 8px;
+
+    text-align: center;
+
+    background-color: v.$live-indicator-color;
+    color: #c7babe;
+
+    padding: 8px 8px;
+
+    font-size: v.$default-size-text;
+    font-weight: bold;
+  }
+
+  .matchInfo {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    color: v.$text-primary-color;
+    font-weight: bold;
+    font-size: v.$default-size-text;
+
+    gap: 40px;
+  }
+
+  .splitName {
+    display: inline-block;
+    white-space: pre-wrap;
+
+    text-align: center;
+
+    font-size: 18px;
+
+    line-height: 1.2;
+  }
+
+  .teamWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-width: 120px;
+    max-width: 150px;
+    width: 100%;
+
+    img {
+      height: 90px;
+      width: 90px;
+    }
+  }
+
+  .matchStatus {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 10px;
+
+    .scoreText {
+      font-size: 40px;
+      font-weight: bold;
+    }
+  }
+
+  .btnStats {
+    cursor: pointer;
+
+    margin-top: 20px;
+
+    color: v.$btn-text-color;
+
+    background-color: v.$btn-stats-color;
+
+    font-size: v.$default-size-text;
+    font-weight: bold;
+
+    border: none;
+    border-radius: 8px;
+
+    padding: 8px 22px;
+
+    &:hover {
+      background-color: v.$btn-stats-color-hover;
+    }
+  }
+}

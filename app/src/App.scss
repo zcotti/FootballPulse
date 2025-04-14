@@ -1,9 +1,9 @@
-@use "src/styles/variables" as v;
+@use "./styles/variables.scss" as v;
 
 body {
-    width: 100%;
-    height: 100%;
- 
-    background-color: v.$primary-color;
-    font-family: v.$main-text-style;
+  width: 100%;
+  height: 100vh;
+
+  background-color: v.$primary-color;
+  font-family: v.$main-text-style;
 }

@@ -1,0 +1,62 @@
+@use "../../styles/variables.scss" as v;
+
+.footer {
+  height: 200px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 50px;
+
+  gap: 80px;
+
+  border-top: 1px solid v.$border-nav-footer-color;
+
+  background-color: #011230;
+
+  .nameText {
+    font-size: 40px;
+    color: #fff;
+
+    span {
+      color: v.$text-secondary-color;
+    }
+  }
+
+  .navFooter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 38px;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 40px;
+    font-size: v.$nav-font-size;
+  }
+
+  a {
+    font-weight: 400;
+
+    text-decoration: none;
+    color: v.$text-primary-color;
+  }
+
+  .numberPhone {
+    font-size: 22px;
+    font-weight: 500;
+    color: #fff;
+  }
+
+  .mail {
+    font-weight: 500;
+    color: v.$text-secondary-color;
+  }
+}

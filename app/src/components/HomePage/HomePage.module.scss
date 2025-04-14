@@ -11,7 +11,6 @@
   width: 500px;
 }
 
-
 .imageCont {
   img {
     clip-path: polygon(
@@ -25,7 +24,11 @@
   }
 }
 
-
 .matchesInfo {
   padding: 20px 78px 0px 78px;
+}
+
+.filters {
+  display: flex;
+  gap: 40px;
 }

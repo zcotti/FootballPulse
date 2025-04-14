@@ -1,0 +1,40 @@
+@use "../../styles/variables.scss" as v;
+
+.filterGroup {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 15px;
+
+  .filterLeague {
+    cursor: pointer;
+
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: v.$font-size-medium;
+
+    padding: 9px 25px;
+    border: 1px solid #606e89;
+
+    background-color: #01102d;
+    color: white;
+
+    option {
+      cursor: pointer;
+
+      font-size: 12px;
+      font-weight: v.$font-size-medium;
+
+      &:checked {
+        background: v.$filter-league-btn-color;
+      }
+    }
+  }
+}
+
+.filterLabel {
+  font-size: v.$default-size-text;
+  font-weight: bold;
+  color: #c4c1c1;
+}

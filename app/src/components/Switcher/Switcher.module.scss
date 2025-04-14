@@ -39,7 +39,7 @@
     animation: changeColor 0.5s forwards;
     border-radius: 8px;
 
-    background: #01cc6a;
+    background: v.$btn-stats-color;
     color: v.$btn-text-color;
   }
 }
@@ -50,7 +50,7 @@
     color: #333333;
   }
   100% {
-    background: #01cc6a;
+    background: v.$btn-stats-color-hover;
     color: v.$btn-text-color;
   }
 }

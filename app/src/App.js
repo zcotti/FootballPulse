@@ -4,23 +4,21 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import HomePage from "./components/HomePage/HomePage";
 import FavouritesPage from "./components/FavouritesPage/FavouritesPage";
 import SquadPage from "./components/SquadPage/SquadPage";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
-    <div className="App">
-      <Router>
+    <Router>
+      <div className="App">
         <Header />
         <Routes>
-          <Route exact path="/" component={HomePage} />
-          <Route path="/favourites" component={FavouritesPage} />
-          <Route path="/squad" component={SquadPage} />
+          <Route index element={<HomePage />} />
+          <Route path="/favourites" element={<FavouritesPage />} />
+          <Route path="/squad" element={<SquadPage />} />
         </Routes>
-      </Router>
-      <HomePage/>
-      <footer>
-        
-      </footer>
-    </div>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
