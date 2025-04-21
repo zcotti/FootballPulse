@@ -12,11 +12,7 @@ function MatchesCards({ league }) {
   const fetchMatches = useCallback(async () => {
     try {
       const response = await fetch(
-        `https://cors-anywhere.herokuapp.com/https://api.football-data.org/v4/matches?competitions=${league}&dateFrom=2025-02-10&dateTo=2025-02-16`,
-        {
-          headers: { "X-Auth-Token": process.env.REACT_APP_API_TOKEN },
-          "Content-Type": "application/json",
-        }
+        `/api/matches?league=${league}`
       );
 
       if (!response.ok) {
