@@ -1,11 +1,11 @@
 import React, { useCallback, useState } from "react";
 import photo from "../../Images/ball.svg";
 import styles from "./HomePage.module.scss";
-import Title from "../Title/Title";
-import SearchForm from "../SearchForm/SearchForm";
-import Switcher from "../Switcher/Switcher";
-import MatchesCards from "../MatchesCards/MatchesCards";
-import FilterLeague from "../FilterLeague/FilterLeague";
+import Title from "../Title/Title.jsx";
+import SearchForm from "../SearchForm/SearchForm.jsx";
+import Switcher from "../Switcher/Switcher.jsx";
+import MatchesCards from "../MatchesCards/MatchesCards.jsx";
+import FilterLeague from "../FilterLeague/FilterLeague.jsx";
 
 function HomePage() {
   const [selectedLeague, setSelectedLeague] = useState("ALL");

@@ -1,5 +1,11 @@
-import React from "react";
+import React, { useCallback } from "react";
 import styles from "./MatchCard.module.scss";
+
+import PL from "../../Images/LeagueImg/PL.svg";
+import PD from "../../Images/LeagueImg/PD.svg";
+import SA from "../../Images/LeagueImg/SA.svg";
+import BL1 from "../../Images/LeagueImg/BL1.svg";
+import FL1 from "../../Images/LeagueImg/FL1.svg";
 
 function MatchCard({ match }) {
   const titleLeague = {
@@ -11,12 +17,28 @@ function MatchCard({ match }) {
   };
 
   const leagueImages = {
-    PL: require("../../Images/LeagueImg/PL.svg").default,
-    PD: require("../../Images/LeagueImg/PD.svg").default,
-    SA: require("../../Images/LeagueImg/SA.svg").default,
-    BL1: require("../../Images/LeagueImg/BL1.svg").default,
-    FL1: require("../../Images/LeagueImg/FL1.svg").default,
+    PL,
+    PD,
+    SA,
+    BL1,
+    FL1,
   };
+
+  const handleStatsBtn = useCallback(async (id) => {
+    try {
+      const response = await fetch(`/api/matches/stats?id=${id}`);
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      console.error("Ошибка при загрузке данных:", error);
+      throw error;
+    }
+  }, []);
 
   return (
     <div
@@ -36,7 +58,14 @@ function MatchCard({ match }) {
           <div className={styles.scoreText}>
             {match.score.fullTime.home} : {match.score.fullTime.away}
           </div>
-          <button className={styles.btnStats}>STATS</button>
+          <button
+            onClick={() => {
+              handleStatsBtn(match.id);
+            }}
+            className={styles.btnStats}
+          >
+            STATS
+          </button>
         </div>
         <div className={styles.teamWrapper}>
           <img src={match.awayTeam.crest} alt={match.awayTeam.name} />

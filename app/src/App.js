@@ -1,10 +1,10 @@
 import "./App.scss";
-import Header from "./components/Header/Header";
+import Header from "./components/Header/Header.jsx";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import HomePage from "./components/HomePage/HomePage";
-import FavouritesPage from "./components/FavouritesPage/FavouritesPage";
-import SquadPage from "./components/SquadPage/SquadPage";
-import Footer from "./components/Footer/Footer";
+import HomePage from "./components/HomePage/HomePage.jsx";
+import FavouritesPage from "./components/FavouritesPage/FavouritesPage.jsx";
+import SquadPage from "./components/SquadPage/SquadPage.jsx";
+import Footer from "./components/Footer/Footer.jsx";
 
 function App() {
   return (

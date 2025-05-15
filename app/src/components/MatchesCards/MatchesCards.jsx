@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import styles from "./MatchesCards.module.scss";
-import MatchCard from "../MatchCard/MatchCard";
-import ArrowButton from "../ArrowButton/ArrowButton";
+import MatchCard from "../MatchCard/MatchCard.jsx";
+import ArrowButton from "../ArrowButton/ArrowButton.jsx";
 
 const VISIBLE_CARDS = 3;
 
@@ -11,15 +11,14 @@ function MatchesCards({ league }) {
 
   const fetchMatches = useCallback(async () => {
     try {
-      const response = await fetch(
-        `/api/matches?league=${league}`
-      );
+      const response = await fetch(`/api/matches?league=${league}`);
 
       if (!response.ok) {
         throw new Error("Ошибка при загрузке данных");
       }
-
+      
       const data = await response.json();
+      console.log(data);
       setMatches(data.matches);
     } catch (error) {
       console.log(error);
